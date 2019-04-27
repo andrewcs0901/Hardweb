@@ -32,7 +32,7 @@ nav ul{
 /*fim CSS Geral*/
 
 /*aplicaveis a id's*/
-#homepage a:link, a:visited{
+#homepage a:link, #homepage a:visited{
     color: #0f0f0f;
     background-color: white;
     display: flex;
@@ -40,7 +40,7 @@ nav ul{
     transition-duration: 0.4s;
     cursor: pointer;
 }
-#homepage a:hover, a:active{
+#homepage a:hover, #homepage a:active{
     background-color: rgb(83, 82, 82);
     text-shadow: 2px 2px 3px;
     color: white;
@@ -53,16 +53,16 @@ nav ul{
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
 }
-#mais-lidas a:link, a:visited{
+#mais-lidas a:link, #mais-lidas a:visited{
     color: #000;
-    background-color: azure;
+    background-color: white;
     padding: 0px 10px 10px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
 }
-#mais-lidas a:hover, a:active{
+#mais-lidas a:hover, #mais-lidas a:active{
     background-color: rgb(83, 82, 82);
-    color:azure;
+    color: white;
     text-shadow: 2px 2px 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -71,15 +71,61 @@ nav ul{
     -o-border-radius: 3px;
 }
 
-#tecnologia{
+#tecnologia a:link, #tecnologia a:visited{
+    color: #000;
+    background-color: white;
     padding: 0px 10px 10px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
-#celulares{
+
+#tecnologia a:hover, #tecnologia a:active{
+    background-color: rgb(83, 82, 82);
+    color: white;
+    text-shadow: 2px 2px 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+#celulares a:link, #celulares a:visited{
+    color: #000;
+    background-color: white;
     padding: 0px 10px 10px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
-#seguranca{
+#celulares a:hover, #celulares a:active{
+    background-color: rgb(83, 82, 82);
+    color: white;
+    text-shadow: 2px 2px 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#seguranca a:link, #seguranca a:visited{
+    color: #000;
+    background-color: white;
     padding: 0px 10px 10px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
+
+#seguranca a:hover, #seguranca a:active{
+    background-color: rgb(83, 82, 82);
+    color: white;
+    text-shadow: 2px 2px 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
 #botao_login{
     text-align: center;
     vertical-align: bottom;
@@ -87,8 +133,9 @@ nav ul{
 /*fim aplicaveis a id's*/
 
 .social_media{
-    display: block;
-    align-content: right;
+    display: inline;
+    place-items: right;
+    text-align: right;
 }
 
 .caixa_login{
@@ -97,17 +144,14 @@ nav ul{
 }
 
 .caixa_pesquisa{
-    display: flex;
     padding: 20px 10px 10px 10px;
 }
 
 .noticia_destaque{
     display: flex;
-    flex-wrap: wrap;
 }
 
 div .titulo_destaque a{
-    display: flex;
     color: white;
     text-shadow: 1.5px 1.5px 3px #000;
     text-align: center;
@@ -121,9 +165,7 @@ div .titulo_destaque a:hover, a:active{
 
 div .intro_noticia{
     text-align: justify;
-    display: flex;
-    padding: 0%;
-
+    margin: 0% 35% 0% 1%;
 }
 
 div .img_destaque{
@@ -143,7 +185,6 @@ div .destaques{
 }
 
 div .mais_lidas{
-    f
     display: flex;
     flex-direction: row-reverse;
 }
@@ -151,6 +192,7 @@ div .mais_lidas{
 p{
     text-indent: 15px;
 }
+
 
 .corpo-noticia{
     display: flex;
