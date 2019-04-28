@@ -11,6 +11,7 @@ body{
 
 header{
     display: flex;
+    align-items: stretch;
     flex-wrap: wrap;
 }
 
@@ -126,29 +127,29 @@ nav ul{
     -o-border-radius: 3px;
 }
 
-#botao_login{
-    text-align: center;
-    vertical-align: bottom;
-}
 /*fim aplicaveis a id's*/
 
-.social_media{
-    display: inline;
-    place-items: right;
-    text-align: right;
+.social_media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
+
 .caixa_login{
-    display: flex;
-    align-items: stretch;
+    text-align: center;
+    color: #f0f0f0;
+    padding: 0px 10px 10px 10px;
+    background-color: #292929;
+    border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    -ms-border-radius:6px;
+    -o-border-radius:6px;
 }
 
 .caixa_pesquisa{
-    padding: 20px 10px 10px 10px;
-}
-
-.noticia_destaque{
-    display: flex;
+    padding: 0px 0px 0px 0px;
 }
 
 div .titulo_destaque a{
@@ -163,10 +164,7 @@ div .titulo_destaque a:hover, a:active{
     font-size: 25px;
 }
 
-div .intro_noticia{
-    text-align: justify;
-    margin: 0% 35% 0% 1%;
-}
+
 
 div .img_destaque{
     height: 200px;
@@ -181,18 +179,21 @@ div .img_destaque{
 }
 
 div .destaques{
-    display: flex;
+    justify-content: center;
 }
 
-div .mais_lidas{
-    display: flex;
-    flex-direction: row-reverse;
+div .aside_mais_lidas{
+    justify-content: right;
 }
 
 p{
     text-indent: 15px;
 }
 
+#articles{
+    display: flex;
+    flex-flow: row wrap;
+}
 
 .corpo-noticia{
     display: flex;
