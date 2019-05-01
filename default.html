@@ -4,142 +4,120 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Andrew">
     <title>HardWeb</title>
     <link rel="stylesheet" href="stilo.css" />
 </head>
 
 <body>
-    <main>
-        <header class="cabecalho">
-            <div class="logo"><a href="default.html"><img src="logo.jpg" alt="HardWeb logo" height="100"></a></div>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <span id="hardweb">
+                    <a href="default.html">
+                        <h1>HARDWEB</h1>
+                    </a>
+                </span>
+                <span id="lema"><a href="default.html">
+                        <h4>Tudo sobre tecnologia</h4>
+                    </a>
+                </span>
+            </div>
             <nav class="menu">
-                <ul>
-                    <span id="homepage">
-                        <li><a href="default.html">Home</a></li>
-                    </span>
-                    <span id="mais-lidas">
+                <nav class="main-nav">
+                    <ul>
+                        <div class="homepage">
+                            <li><a href="default.html">Home</a></li>
+                        </div>
                         <li><a href="Maislidas.html">Mais lidas</a></li>
-                    </span>
-                    <span id="tecnologia">
                         <li><a href="Tecnologia.html">Tecnologia</a></li>
-                    </span>
-                    <span id="celulares">
                         <li><a href="celulares.html">Celulares</a></li>
-                    </span>
-                    <span id="seguranca">
                         <li><a href="segurancaweb.html">Segurança</a></li>
-                    </span>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="botao-acao">
                     <div class="caixa_login">
                         <form method="POST">
-                            E-mail</br>
-                            <input type="email" name="email">
-                            </br>Senha</br>
-                            <input type="password">
+                            Login</br>
+                            <input type="email" name="email" placeholder="email@exemplo.com">
+                            </br>
+                            <input type="password" placeholder="senha">
                             </br>
                             <span id="botao_login">
-                                <input type="submit" value="Login">
+                                <input type="submit" value="entrar">
+                                </br>
                             </span>
                         </form>
                     </div>
                     <div class="caixa_pesquisa">
                         <form method="POST">
                             <input type="search" value="Pesquisa">
-                            <img width="30" src="wirebox.png">
                         </form>
                     </div>
-                </ul>
-        </header>
-
-        <div class="social_media">
-            <div class=media1><img width="60" src="wirebox.png"></div>
-            <div class="media2"><img width="60" src="wirebox.png"></div>
-            <div class="texto_midia">
-                <h5><br><br>Redes Sociais</h5>
+                </div>
+            </nav>
+            <div class="social_media">
+                <div class=media1><a href=""><img width="60" src="wirebox.png"></a></div>
+                <div class="media2"><a href=""><img width="60" src="wirebox.png"></a></div>
             </div>
-        </div>
-        <section id="articles">
+        </header>
+        <section id="container">
             <div class="destaques">
-                <h1>Destaques</h1>
+                <div class="texto-destaque">
+                    <h1>Destaque</h1>
+                </div>
                 <div class="noticia_destaque">
                     <div class="img_destaque">
-                        <a href="google-stadia-poderoso.html"></a>
                         <div class="titulo_destaque">
-                            <h2><a href="google-stadia-poderoso.html">Google Stadia <br>será mais poderoso que PS4 e
-                                    Xbox juntos</a></span>
-                            </h2>
+                            <a href="google-stadia-poderoso.html"><img src="googlestadia.jpg" alt="stadia_img"></a>
+                            <a href="google-stadia-poderoso.html">
+                                <h2>Stadia será mais poderoso que PS4 e Xbox juntos
+                                </h2>
+                                <div class="resumo"><br> Stadia Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                                    distinctio ad
+                                    ratione beatae facere cum. Nemo quod debitis ad officia? leia mais...</div>
+                            </a>
                         </div>
                     </div>
-                    <div class="intro_noticia">Depois de
-                        semanas de
-                        rumores
-                        e especulações, o Google
-                        finalmente retomou a visão sobre o futuro dos videogames ...
-                        <a href="google-stadia-poderoso.html">
-                            Leia mais</a>
-                    </div>
+
                 </div>
             </div>
-            <div class="aside_mais_lidas">
-                <div class="mais-lidas">
-                    <h4><a href=maislidas.html> Mais lidas</a></h4>
-                    <a href="noticiagenerica.html"><img width="75" src="wirebox.png">
-                        <ul>
-                            <li>
-                                Lorem ipsum, dolor sit
-                            </li>
-                        </ul>
-                    </a>
-                </div>
-                <div><a href="noticiagenerica.html"><img width="75" src="wirebox.png">
-                        <ul>
-                            <li>
-                                Lorem ipsum dolor sit amet
-                            </li>
-                        </ul>
-                    </a>
-                </div>
-            </div>
-            <div class="outros_destaques">
+            <div class="outras_noticias">
                 <h3>Outros destaques</h3>
-                <div class="noticia_secundaria">
-                    <h2>Lorem ipsum dolor sit amet consectetur</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dignissimos corrupti enim
-                        deserunt
-                        beatae
-                        voluptate nulla, magnam necessitatibus eius possimus dolorum culpa ipsum dolor quis cum vitae?
-                        Eius,
-                        laudantium
-                        dolore?Similique consequatur quibusdam mollitia veritatis corporis facilis, praesentium quam
-                        quas.
-                        Ipsa
-                        animi,
-                        deleniti amet assumenda eum unde laborum laudantium reprehenderit nemo fugit dolorum cupiditate
-                        nesciunt
-                        rem
-                        corrupti cum quae asperiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla
-                        assumenda
-                        similique nesciunt cupiditate ad eligendi quam molestiae magnam quae. Rerum minus autem
-                        temporibus
-                        architecto
-                        animi saepe quos distinctio alias. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Excepturi
-                        illum
-                        dignissimos ex explicabo necessitatibus saepe ad laudantium optio sed possimus. Molestias sit
-                        similique
-                        deleniti
-                        reprehenderit animi ut ipsum eos distinctio!asperiores?Lorem</p>
-                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ducimus adipisci a dolore quisquam omnis consectetur sint consequatur, placeat veritatis ipsam. Fugiat ex voluptate magnam rerum esse, modi non eaque minima, cum voluptatum, recusandae facilis excepturi vel dolorem! Sit error totam optio sed veniam earum voluptate sunt inventore accusamus nesciunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta quod voluptates et expedita provident, aperiam labore saepe possimus. Nulla sint nostrum obcaecati tempora ullam veritatis cupiditate inventore dolor accusantium quisquam voluptatem harum, eaque quos. Minima soluta delectus molestias totam adipisci! Eveniet, sequi modi architecto ipsum amet vitae inventore tempora ratione!</p>
             </div>
         </section>
-        <div class="rodape">
-            <form table width="450px">
-                <footer style="text-align:center">
-                    Copyright: Todos os direitos reservados 2019
-                </footer>
+        <div class="mais_lidas">
+            <div class="notitia_lateral">
+                <div class="mais-lidas">
+                    <h3>Mais lidas</a></h3>
+                </div>
+                <div class="news_2">
+                    <h2><a href="#"><br><br><img src="facebook.png" alt="facebook logo">Facebook passará por grandes mudanças</h2>
+                    </h2>
+                    <ul>
+                        <li>
+                            saiba mais...
+                        </li>
+                    </ul>
+                    </a>
+                </div>
+                    <div class="news_1">
+                        <h2><a href="#"><img src="coruja.jpg" alt="wirebox">ipsum dolor
+                        </h2>
+                        <ul>
+                            <li>
+                                saiba mais
+                            </li>
+                        </ul>
+                        </a>
+                    </div>
+            </div>
         </div>
-    </main>
+        <footer>Andrew Costa 2019</footer>
 </body>
 
 </html>

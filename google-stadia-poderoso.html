@@ -8,53 +8,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HardWeb</title>
     <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="news.css">
 </head>
 
 <body>
-
-    <body>
-
-        <header class="cabecalho">
-            <div class="logo"><a href="default.html"><img src="logo.jpg" alt="HardWeb logo" height="100px"></a></div>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <span id="hardweb">
+                    <a href="default.html">
+                        <h1>HARDWEB</h1>
+                    </a>
+                </span>
+                <span id="lema"><a href="default.html">
+                        <h4>Tudo sobre tecnologia</h4>
+                    </a>
+                </span>
+            </div>
             <nav class="menu">
-                <ul>
-                    <span id="homepage">
-                        <li><a href="default.html"> Home</a></li>
-                    </span>
-                    <span id="mais-lidas">
+                <nav class="main-nav">
+                    <ul>
+                        <div class="homepage">
+                            <li><a href="default.html">Home</a></li>
+                        </div>
                         <li><a href="Maislidas.html">Mais lidas</a></li>
-                    </span>
-                    <span id="tecnologia">
                         <li><a href="Tecnologia.html">Tecnologia</a></li>
-                    </span>
-                    <span id="celulares">
                         <li><a href="celulares.html">Celulares</a></li>
-                    </span>
-                    <span id="seguranca">
                         <li><a href="segurancaweb.html">Segurança</a></li>
-                    </span>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="botao-acao">
                     <div class="caixa_login">
-                        </br>
                         <form method="POST">
-                            E-mail</br>
-                            <input type="email" name="email">
-                            </br>Senha</br>
-                            <input type="password">
-                            <input type="submit" value="Login">
+                            Login</br>
+                            <input type="email" name="email" placeholder="email@exemplo.com">
+                            </br>
+                            <input type="password" placeholder="senha">
+                            </br>
+                            <span id="botao_login">
+                                <input type="submit" value="entrar">
+                                </br>
+                            </span>
                         </form>
                     </div>
                     <div class="caixa_pesquisa">
-                        </br>
                         <form method="POST">
                             <input type="search" value="Pesquisa">
-                            <img width="30" src="wirebox.png">
                         </form>
                     </div>
-                </ul>
+                </div>
+            </nav>
+            <div class="social_media">
+                <div class=media1><a href=""><img width="60" src="wirebox.png"></a></div>
+                <div class="media2"><a href=""><img width="60" src="wirebox.png"></a></div>
+            </div>
         </header>
         <div class="título-notícia">
-            <h1 style="font-size: 35px">Google Stadia é mais poderoso que PS4 e Xbox juntos</h1>
-            <img style="width: 30%" itemtype="png" src="google-stadia-poderoso_arquivos/stadia.png" alt="Stadia logo">
+            <h1 style="font-size: 2em">Google Stadia é mais poderoso que PS4 e Xbox juntos</h1>
+            <div class="img_news"><img style="width: 55%" itemtype="png" src="google-stadia-poderoso_arquivos/stadia.png" alt="Stadia logo"></div>
         </div>
         <div class="corpo-noticia">
             <p> Depois de semanas de rumores e especulações, o Google
@@ -66,7 +78,7 @@
                 sido
                 problemático no passado, não é mais retido pelo hardware, pois o Google Stadia é mais poderoso que o
                 PlayStation
-                4 e o Xbox One combinados.<br>
+                4 e o Xbox One combinados.<br><br>
             </p>
             <p>
                 Isso foi confirmado pelo Google em seu discurso de abertura do GDC 2019. Enquanto o PS4 Pro tem 4,2
@@ -82,7 +94,7 @@
                 jogos com resolução de 8k e 120 quadros por segundo, o que deve tornar a plataforma à prova do futuro
                 por
                 algum
-                tempo.<br>
+                tempo.<br><br>
             </p>
             <p>
                 Claro, todo esse poder não significa muito se o Google Stadia não tiver os jogos para fazer o backup. O
@@ -111,22 +123,32 @@
             </p>
         </div>
         <div class="mais_lidas">
-            <h4><a href=maislidas.html> Mais lidas</a></h4>
-            <a href="noticiagenerica.html"><img width="75" src="wirebox.png">
-                <ul>
-                    <li>
-                        Lorem ipsum, dolor sit
-                    </li>
-                </ul>
-            </a>
-            <a href="noticiagenerica.html"><img width="75" src="wirebox.png">
-                <ul>
-                    <li>
-                        Lorem ipsum dolor sit amet
-                    </li>
-                </ul>
-            </a>
-        </div>
+                <div class="notitia_lateral">
+                    <div class="mais-lidas">
+                        <h3>Mais lidas</a></h3>
+                    </div>
+                    <div class="news_2">
+                        <h2><a href="#"><br><br><img src="facebook.png" alt="facebook logo">Facebook passará por grandes mudanças</h2>
+                        </h2>
+                        <ul>
+                            <li>
+                                saiba mais...
+                            </li>
+                        </ul>
+                        </a>
+                    </div>
+                        <div class="news_1">
+                            <h2><a href="#"><img src="coruja.jpg" alt="wirebox">ipsum dolor
+                            </h2>
+                            <ul>
+                                <li>
+                                    saiba mais
+                                </li>
+                            </ul>
+                            </a>
+                        </div>
+                </div>
+            </div>
         <div class="caixa-comentario">
             <form method="POST">
                 Comente <br>
@@ -137,12 +159,13 @@
         <div class="rodape">
             <form table="" width="100%">
                 <footer style="text-align:center">
-                    Copyright: Todos os direitos reservados 2019
+                    Andrew Costa 2019
                 </footer>
             </form>
         </div>
+    </div>
 
 
-    </body>
+</body>
 
 </html>

@@ -1,203 +1,171 @@
-/*CSS Geral*/
-body{
-    color: rgb(50, 50, 50);
+*{
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    border: 0%;
 }
 
-.main{
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.news_1 img{
     margin: auto;
 }
 
-header{
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em; 
+    grid-template-areas:
+    "header"
+    "container"
+    "mais_lidas";
+    text-align: center;
+}
+
+#container{
+    grid-area: container;
+}
+
+.main-nav ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3em;
+    padding: 0.2em; 
+    background-color: #242424
+}
+
+.main-nav a{
+    display: block;
+    padding: auto 10%;
+    background-color: rgb(83, 83, 83);
+    color: #eeeeee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+li{
+    list-style: none;
+}
+
+.resumo{
+    text-align: justify;
+}
+
+.outras_noticias{
+    margin-top: 3%;
 }
 
 a{
+    color: rgb(36, 36, 36);
     text-decoration: none;
 }
 
-nav {
-    display: flex;
+img{
+    max-width: 100%;
+    border: 0;
+    display: block;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: top;
-}
-/*fim CSS Geral*/
 
-/*aplicaveis a id's*/
-#homepage a:link, #homepage a:visited{
-    color: #0f0f0f;
+header{
+    grid-area: header;
     background-color: white;
-    display: flex;
-    padding: 0px 10px 10px 0px;
-    transition-duration: 0.4s;
-    cursor: pointer;
 }
-#homepage a:hover, #homepage a:active{
-    background-color: rgb(83, 82, 82);
-    text-shadow: 2px 2px 3px;
-    color: white;
-    display: flex;
+
+
+.caixa_login, .botao-acao, #mais-lidas, .media1, .media2{
+    display: none;
+}
+
+
+#noticias{
+    grid-area: noticias;
+}
+
+.texto-destaque{
     text-align: center;
-    padding: 0px 10px 10px 0px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-#mais-lidas a:link, #mais-lidas a:visited{
-    color: #000;
-    background-color: white;
-    padding: 0px 10px 10px 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-#mais-lidas a:hover, #mais-lidas a:active{
-    background-color: rgb(83, 82, 82);
-    color: white;
-    text-shadow: 2px 2px 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+    gap: 2em;
+    margin-bottom: 5%;
+    margin-right: 50%;
 }
 
-#tecnologia a:link, #tecnologia a:visited{
-    color: #000;
-    background-color: white;
-    padding: 0px 10px 10px 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-#tecnologia a:hover, #tecnologia a:active{
-    background-color: rgb(83, 82, 82);
-    color: white;
-    text-shadow: 2px 2px 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
-#celulares a:link, #celulares a:visited{
-    color: #000;
-    background-color: white;
-    padding: 0px 10px 10px 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-#celulares a:hover, #celulares a:active{
-    background-color: rgb(83, 82, 82);
-    color: white;
-    text-shadow: 2px 2px 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-#seguranca a:link, #seguranca a:visited{
-    color: #000;
-    background-color: white;
-    padding: 0px 10px 10px 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-#seguranca a:hover, #seguranca a:active{
-    background-color: rgb(83, 82, 82);
-    color: white;
-    text-shadow: 2px 2px 3px;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-
-/*fim aplicaveis a id's*/
-
-.social_media {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-}
-
-
-.caixa_login{
+.noticia_lateral{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
     text-align: center;
-    color: #f0f0f0;
-    padding: 0px 10px 10px 10px;
-    background-color: #292929;
-    border-radius:6px;
-    -webkit-border-radius:6px;
-    -moz-border-radius:6px;
-    -ms-border-radius:6px;
-    -o-border-radius:6px;
 }
 
-.caixa_pesquisa{
-    padding: 0px 0px 0px 0px;
+.mais_lidas{
+    grid-area: mais_lidas;
 }
 
-div .titulo_destaque a{
-    color: white;
-    text-shadow: 1.5px 1.5px 3px #000;
-    text-align: center;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-div .titulo_destaque a:hover, a:active{
-    font-size: 25px;
+.titulo_destaque a{
+    color: #272727;
 }
 
 
-
-div .img_destaque{
-    height: 200px;
-    align-content: center;
-    background-image: url("googlestadia.jpg");
-    background-size: 30% 30% 30% 30%;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
+@media (max-width: 520px){
+    .resumo{
+        display: none;
+        text-align: justify;
+    }
 }
-
-div .destaques{
-    justify-content: center;
+@media (max-width: 900px) and (min-width:520px){
+    body{
+        margin: 1%;
+    }
+    .wrapper{
+        gap: 3em;
+        grid-template-columns: auto 20%;
+        grid-template-areas: 
+        "header header"
+        "container mais_lidas"
+    }
+    .outras_noticias h3, .outras_noticias p{
+        margin-top: 3%;
+        text-align: justify;
+    }
 }
-
-div .aside_mais_lidas{
-    justify-content: right;
-}
-
-p{
-    text-indent: 15px;
-}
-
-#articles{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.corpo-noticia{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 3% 40% 0% 2%;
-    text-align: justify;
+@media (min-width: 900px){
+    body{
+        margin: 3%;
+    }
+    .wrapper{
+        gap: 5em;
+        grid-template-columns: auto 20%;
+        grid-template-areas: 
+        "header header"
+        "container mais_lidas"
+    }
+    .main-nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+    }
+    .titulo_destaque{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        gap: 1.3em;
+    }
+    .texto-destaque{
+        margin-right: 80%;
+    }
+    .news_2{
+        margin-left: 3%;
+    }
+    footer{
+        text-align: center;
+        margin-left: 40%;
+    }
+    .outras_noticias h3, .outras_noticias p{
+        margin-top: 3%;
+        text-align: justify;
+    }
 }
