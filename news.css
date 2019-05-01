@@ -41,6 +41,7 @@
         margin: 1%;
     }
     .wrapper{
+        gap: 1em;
         grid-template-areas: 
         "header"
         "titulo_noticia"
@@ -59,5 +60,8 @@
 @media (min-width:520px) and (max-width:920){
     .corpo-noticia{
         margin-top: -50%;
+    }
+    .wrapper{
+        gap: 2.5em;
     }
 }
