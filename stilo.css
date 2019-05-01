@@ -148,7 +148,12 @@ header{
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
-    }
+        border-radius: 4px    ;
+        -webkit-border-radius: 4px    ;
+        -moz-border-radius: 4px    ;
+        -ms-border-radius: 4px    ;
+        -o-border-radius: 4px    ;
+}
     .titulo_destaque{
         display: grid;
         grid-template-columns: 30% 70%;
