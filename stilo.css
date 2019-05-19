@@ -58,6 +58,11 @@ li{
 
 .outras_noticias{
     margin-top: 3%;
+    text-align: left;
+}
+
+.another_news1, .another_news2, .another_news3{
+    margin-bottom: 2%;
 }
 
 a{
@@ -86,6 +91,11 @@ header{
 #noticias{
     grid-area: noticias;
 }
+.outros_destaques{
+    margin-bottom: 3%;
+}
+
+.resumo
 
 .texto-destaque{
     text-align: center;
@@ -113,6 +123,9 @@ header{
 @media (max-width: 520px){
     .resumo{
         display: none;
+        text-align: justify;
+    }
+    .outras_noticias >{
         text-align: justify;
     }
 }

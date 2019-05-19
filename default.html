@@ -164,17 +164,15 @@
         <footer>Andrew Costa 2019</footer>
         <script>
             var newsTitle = db.destaque[0].titulo;
-            var newsIntro = db.noticias[0].resumo;
+            var newsIntro = db.destaque[0].resumo;
             var title_another_news1 = db.noticias[0].titulo;
             var title_another_news2 = db.noticias[1].titulo;
             var title_another_news3 = db.noticias[2].titulo;
-            var imgs = db.noticias[1].imagem;
             document.getElementById('titulo').innerHTML = newsTitle;
             document.getElementById('resumo_destaque').innerHTML = newsIntro;
             document.getElementById('title_another_news1').innerHTML = title_another_news1;
             document.getElementById('title_another_news2').innerHTML = title_another_news2;
             document.getElementById('title_another_news3').innerHTML = title_another_news3;
-            document.getElementById('img_news1').innerHTML = imgs;
         </script>
 </body>
 
