@@ -152,6 +152,17 @@ header{
 
 
 @media (max-width: 520px){
+    .main-nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        letter-spacing: 0.108em;
+        font-weight: 100;
+        line-height: 1.4;
+        font-size: 1.2em;
+}
     .resumo{
         display: none;
         text-align: justify;
@@ -190,6 +201,12 @@ header{
         "header header"
         "container mais_lidas"
     }
+    .main-nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+}
     .outras_noticias h3, .outras_noticias p{
         margin-top: 3%;
         text-align: justify;

@@ -118,7 +118,7 @@
                 }
                 else {
                     noticiaIntro = `<p>${db.noticias[i].resumo}</p><a href="#">Leia Mais</a>`;
-                    noticiaTitle += `<h2>${db.noticias[i].titulo}</h2><img src="${db.noticias[i].imagem}"><br>` + noticiaIntro+`<br>`;
+                    noticiaTitle += `<h2>${db.noticias[i].titulo}</h2><img src="${db.noticias[i].imagem}"<br>` + noticiaIntro+`<br>`;
                 }
             }
             document.getElementById('noticias').innerHTML = noticiaTitle;
