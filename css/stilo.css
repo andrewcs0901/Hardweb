@@ -33,6 +33,7 @@ body{
 }
 #noticias p{
     margin-left: 22%;
+    text-align: justify;
 }
 #recentes{
     float: right;
