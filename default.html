@@ -108,10 +108,13 @@
             var noticiaDestaque = '';
             var noticiaDestaqueIntro = '';
             var noticiaTexto = '';
+            var imgNews = '';
             for (i = 0; i < db.noticias.length; i++) {
                 if (db.noticias[i].id == 001) {
-                    noticiaDestaque = `<h2>${db.noticias[0].titulo}</h2><img src="${db.noticias[0].imagem}">`;
+                    noticiaDestaque = `<h2>${db.noticias[0].titulo}</h2>`;
+                    noticiaDestaqueImagem = `<div class="img-destaque"><img src="${db.noticias[0].imagem}"></div>`;
                     noticiaDestaqueIntro = `<p>${db.noticias[0].resumo}</p><a href="#">Leia Mais</a>`;
+                    imgNews = `<div id="imagem-noticia"><img src="${db.noticias[0].imagemGrande}"</div>`;
                     for(c = 0; c < 10; c++){
                         noticiaTexto += `${db.noticias[i].texto}`;
                     }
@@ -122,10 +125,10 @@
                 }
             }
             document.getElementById('noticias').innerHTML = noticiaTitle;
-            document.getElementById('noticia-destaque').innerHTML = noticiaDestaque + noticiaDestaqueIntro;
+            document.getElementById('noticia-destaque').innerHTML = noticiaDestaque + noticiaDestaqueImagem + noticiaDestaqueIntro;
             document.getElementById('noticia-destaque').addEventListener('click', function(){
                 document.getElementById('container').innerHTML = '';
-                document.getElementById('container').innerHTML = noticiaDestaque + noticiaTexto;
+                document.getElementById('container').innerHTML = noticiaDestaque + imgNews + noticiaTexto;
             })  
         </script>
 </body>
