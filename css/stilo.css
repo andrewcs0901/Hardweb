@@ -3,14 +3,8 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-html{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;  
-}
-
-.news_1 img{
-    margin: auto;
+body{
+    background-color: #eeeeee;
 }
 
 .wrapper{
@@ -19,27 +13,46 @@ html{
     gap: 2em; 
     grid-template-areas:
     "header"
-    "container"
+    "corpo"
     "mais_lidas";
-    text-align: center;
+}
+
+.news_1 img{
+    margin: auto;
+}
+
+#news{
+    font-size: 3em;
+}
+
+#noticias{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+}
+#recentes{
+    float: right;
 }
 
 #container{
-    grid-area: container;
+    margin-left: 3%;
+    
+}
+#container img{
+    display: block;
+    width: 20%;
+    
 }
 
 .main-nav ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.3em;
+    display: flex;
+    align-content: space-around;
     padding: 0.2em; 
-    background-color: #242424
+    background-color: #1b1b1b
 }
 
 .main-nav a{
     display: block;
     padding: auto 10%;
-    background-color: rgb(83, 83, 83);
     color: #eeeeee;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -58,7 +71,7 @@ li{
 
 .outras_noticias{
     margin-top: 3%;
-    text-align: left;
+    text-align: center;
 }
 
 .another_news1, .another_news2, .another_news3{
@@ -66,7 +79,7 @@ li{
 }
 
 a{
-    color: rgb(36, 36, 36);
+    color: #eeeeee;
     text-decoration: none;
 }
 
@@ -79,7 +92,7 @@ img{
 
 header{
     grid-area: header;
-    background-color: white;
+    background-color: #242424;
 }
 
 
@@ -87,22 +100,11 @@ header{
     display: none;
 }
 
-
-#noticias{
-    grid-area: noticias;
-}
 .outros_destaques{
     margin-bottom: 3%;
 }
 
 .resumo
-
-.texto-destaque{
-    text-align: center;
-    gap: 2em;
-    margin-bottom: 5%;
-    margin-right: 50%;
-}
 
 .noticia_lateral{
     display: grid;
@@ -113,11 +115,9 @@ header{
 
 .mais_lidas{
     grid-area: mais_lidas;
+    margin-right: 10%;
 }
 
-.titulo_destaque a{
-    color: #272727;
-}
 
 
 @media (max-width: 520px){
@@ -146,9 +146,6 @@ header{
     }
 }
 @media (min-width: 900px){
-    body{
-        margin: 3%;
-    }
     .wrapper{
         gap: 5em;
         grid-template-columns: auto 20%;
@@ -161,11 +158,6 @@ header{
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
-        border-radius: 4px    ;
-        -webkit-border-radius: 4px    ;
-        -moz-border-radius: 4px    ;
-        -ms-border-radius: 4px    ;
-        -o-border-radius: 4px    ;
 }
     .titulo_destaque{
         display: grid;
