@@ -8,8 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Andrew">
     <title>HardWeb</title>
-    <link rel="stylesheet" href="stilo.css" />
+    <link rel="stylesheet" href="css/stilo.css" />
     <link rel="icon" href="favicon.ico">
+    <script src="js/fakedb.js"></script>
 </head>
 
 <body>
@@ -32,10 +33,10 @@
                         <div class="homepage">
                             <li><a href="default.html">Home</a></li>
                         </div>
-                        <li><a href="Maislidas.html">Mais lidas</a></li>
-                        <li><a href="Tecnologia.html">Tecnologia</a></li>
-                        <li><a href="celulares.html">Celulares</a></li>
-                        <li><a href="segurancaweb.html">Segurança</a></li>
+                        <li><a href="categoria/Maislidas.html">Mais lidas</a></li>
+                        <li><a href="categoria/Tecnologia.html">Tecnologia</a></li>
+                        <li><a href="categoria/celulares.html">Celulares</a></li>
+                        <li><a href="categoria/segurancaweb.html">Segurança</a></li>
                         <li><a href="#">Login</a></li>
                     </ul>
                 </nav>
@@ -62,30 +63,15 @@
             </nav>
         </header>
         <section id="container">
-            <div class="destaques">
-                <div class="texto-destaque">
-                    <h1>Destaque</h1>
-                </div>
-                <div class="noticia_destaque">
-                    <div class="img_destaque">
-                        <div class="titulo_destaque">
-                            <a href="google-stadia-poderoso.html"><img src="googlestadia.jpg" alt="stadia_img"></a>
-                            <a href="google-stadia-poderoso.html">
-                                <h2>Stadia será mais poderoso que PS4 e Xbox juntos
-                                </h2>
-                                <div class="resumo"><br> Stadia Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                                    distinctio ad
-                                    ratione beatae facere cum. Nemo quod debitis ad officia? leia mais...</div>
-                            </a>
-                        </div>
-                    </div>
+            <h1 id="news">Notícias:</h1>
+            <div id="noticia-destaque">
+            </div>
 
-                </div>
+            <div id="Recentes">
+                <h2>Recentes</h2>
+                <div id="noticias"></div>
             </div>
-            <div class="outras_noticias">
-                <h3>Outros destaques</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ducimus adipisci a dolore quisquam omnis consectetur sint consequatur, placeat veritatis ipsam. Fugiat ex voluptate magnam rerum esse, modi non eaque minima, cum voluptatum, recusandae facilis excepturi vel dolorem! Sit error totam optio sed veniam earum voluptate sunt inventore accusamus nesciunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta quod voluptates et expedita provident, aperiam labore saepe possimus. Nulla sint nostrum obcaecati tempora ullam veritatis cupiditate inventore dolor accusantium quisquam voluptatem harum, eaque quos. Minima soluta delectus molestias totam adipisci! Eveniet, sequi modi architecto ipsum amet vitae inventore tempora ratione!</p>
-            </div>
+            <div id="texto-noticia"></div>
         </section>
         <div class="mais_lidas">
             <div class="notitia_lateral">
@@ -93,7 +79,8 @@
                     <h3>Mais lidas</a></h3>
                 </div>
                 <div class="news_2">
-                    <h2><a href="#"><br><br><img src="facebook.png" alt="facebook logo">Facebook passará por grandes mudanças</h2>
+                    <h2><a href="#"><br><br><img src="img/facebook.png" alt="facebook logo">Facebook passará por grandes
+                            mudanças</h2>
                     </h2>
                     <ul>
                         <li>
@@ -102,19 +89,45 @@
                     </ul>
                     </a>
                 </div>
-                    <div class="news_1">
-                        <h2><a href="#"><img src="coruja.jpg" alt="wirebox">ipsum dolor
-                        </h2>
-                        <ul>
-                            <li>
-                                saiba mais
-                            </li>
-                        </ul>
-                        </a>
-                    </div>
+                <div class="news_1">
+                    <h2><a href="#"><img src="img/coruja.jpg" alt="wirebox">ipsum dolor
+                    </h2>
+                    <ul>
+                        <li>
+                            saiba mais
+                        </li>
+                    </ul>
+                    </a>
+                </div>
             </div>
         </div>
         <footer>Andrew Costa 2019</footer>
+        <script>
+            var noticiaTitle = '';
+            var noticiaIntro = '';
+            var noticiaDestaque = '';
+            var noticiaDestaqueIntro = '';
+            var noticiaTexto = '';
+            for (i = 0; i < db.noticias.length; i++) {
+                if (db.noticias[i].id == 001) {
+                    noticiaDestaque = `<h2>${db.noticias[0].titulo}</h2><img src="${db.noticias[0].imagem}">`;
+                    noticiaDestaqueIntro = `<p>${db.noticias[0].resumo}</p><a href="#">Leia Mais</a>`;
+                    for(c = 0; c < 10; c++){
+                        noticiaTexto += `${db.noticias[i].texto}`;
+                    }
+                }
+                else {
+                    noticiaIntro = `<p>${db.noticias[i].resumo}</p><a href="#">Leia Mais</a>`;
+                    noticiaTitle += `<h2>${db.noticias[i].titulo}</h2><img src="${db.noticias[i].imagem}"><br>` + noticiaIntro+`<br>`;
+                }
+            }
+            document.getElementById('noticias').innerHTML = noticiaTitle;
+            document.getElementById('noticia-destaque').innerHTML = noticiaDestaque + noticiaDestaqueIntro;
+            document.getElementById('noticia-destaque').addEventListener('click', function(){
+                document.getElementById('container').innerHTML = '';
+                document.getElementById('container').innerHTML = noticiaDestaque + noticiaTexto;
+            })  
+        </script>
 </body>
 
 </html>
