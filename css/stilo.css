@@ -99,7 +99,12 @@ li{
 .resumo{
     text-align: justify;
 }
-
+.texto-noticia{
+    margin-top: 2%;
+}
+#imagem-noticia img{
+    width: 100%;
+}
 .outras_noticias{
     margin-top: 3%;
     text-align: center;
