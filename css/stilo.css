@@ -16,6 +16,9 @@ body{
     "corpo"
     "mais_lidas";
 }
+.logo{
+    margin-left: 1%;
+}
 
 .news_1 img{
     margin: auto;
@@ -52,7 +55,7 @@ body{
     margin-left: 3%;
 }
 #container img{
-    display: block;
+    float: left;
     width: 20%;
 }
 #container a{
@@ -60,6 +63,7 @@ body{
     color: #ececec;
     background-color: #1b1b1b;
     float: inline-end;
+    float: right;
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -68,7 +72,8 @@ body{
     padding: 0 1%;
 }
 #container h2{
-    margin: 6% auto;
+    margin-top: 7%;
+    margin-bottom: 2%;
 }
 
 .main-nav ul{
