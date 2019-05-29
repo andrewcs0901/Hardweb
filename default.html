@@ -13,7 +13,7 @@
     <script src="js/fakedb.js"></script>
 </head>
 
-<body>
+<body onload="getData()">
     <div class="wrapper">
         <header>
             <div class="logo">
@@ -69,7 +69,11 @@
 
             <div id="Recentes">
                 <h2>Recentes</h2>
-                <div id="noticias"></div>
+                <div id="noticias">
+                    <div id= title>titulo</div>
+                    <div id="imagem"><img src="https://lorempixel.com/people/300/200" alt=""></div>
+                    <div id="texto"><p>Carregando...</p></div>
+                </div>
             </div>
             <div id="texto-noticia"></div>
         </section>
@@ -79,8 +83,7 @@
                     <h3>Mais lidas</a></h3>
                 </div>
                 <div class="news_2">
-                    <h2><a href="#"><br><br><img src="img/facebook.png" alt="facebook logo">Facebook passará por grandes
-                            mudanças</h2>
+                    <h2><a href="https://odia.ig.com.br/rio-de-janeiro/2019/05/5647651-policia-faz-operacao--juntos-e-shallow-now--e-prende-quadrilha.html"><br><br><img src="https://meiahora.ig.com.br/_midias/jpg/2019/02/25/700x470/1_d0ox_ekwoaaryec-9820615.jpg" alt="imagem juntos em shallow now">Polícia faz operação 'Juntos e Shallow Now' e prende quadrilha</h2>
                     </h2>
                     <ul>
                         <li>
@@ -103,33 +106,27 @@
         </div>
         <footer>Andrew Costa 2019</footer>
         <script>
-            var noticiaTitle = '';
-            var noticiaIntro = '';
-            var noticiaDestaque = '';
-            var noticiaDestaqueIntro = '';
-            var noticiaTexto = '';
-            var imgNews = '';
-            for (i = 0; i < db.noticias.length; i++) {
-                if (db.noticias[i].id == 001) {
-                    noticiaDestaque = `<h2>${db.noticias[0].titulo}</h2>`;
-                    noticiaDestaqueImagem = `<div class="img-destaque"><img src="${db.noticias[0].imagem}"></div>`;
-                    noticiaDestaqueIntro = `<p>${db.noticias[0].resumo}</p><a href="#">Leia Mais</a>`;
-                    imgNews = `<div id="imagem-noticia"><img src="${db.noticias[0].imagemGrande}"</div>`;
-                    for (c = 0; c < 10; c++) {
-                        noticiaTexto += `${db.noticias[i].texto}`;
-                    }
+            var req = new XMLHttpRequest();
+            var url = 'https://newsapi.org/v2/top-headlines?country=br&apiKey=a83f7e73223d46e8b188cbe85d7b07ac';
+
+            function processaNoticias(){
+                var dados = JSON.parse(req.responseText);
+                var noticias = '';
+                for(i=0;i<dados.articles.length;i++){
+                    noticias+= `<div id="noticias"><a href="${dados.articles[i].url}"><div id="title"><h2>${dados.articles[i].title}</h2><titulo>
+                                <img src="${dados.articles[i].urlToImage}" alt="">
+                                <p>${dados.articles[i].content}</p>
+                                <div id="leia">Leia Mais</div></a></div>`
                 }
-                else {
-                    noticiaIntro = `<p>${db.noticias[i].resumo}</p><a href="#">Leia Mais</a>`;
-                    noticiaTitle += `<h2>${db.noticias[i].titulo}</h2><img src="${db.noticias[i].imagem}"<br>` + noticiaIntro + `<br>`;
-                }
+                console.log(noticias);
+                document.getElementById('noticias').innerHTML = noticias;
             }
-            document.getElementById('noticias').innerHTML = noticiaTitle;
-            document.getElementById('noticia-destaque').innerHTML = noticiaDestaque + noticiaDestaqueImagem + noticiaDestaqueIntro;
-            document.getElementById('noticia-destaque').addEventListener('click', function () {
-                document.getElementById('container').innerHTML = '';
-                document.getElementById('container').innerHTML = noticiaDestaque + imgNews + noticiaTexto;
-            })  
+            function getData(){
+                req.onload = processaNoticias;
+                req.open('GET', url, true);
+                req.send();
+
+            }
         </script>
 </body>
 
