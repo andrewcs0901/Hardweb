@@ -41,6 +41,9 @@ body{
 #recentes{
     float: right;
 }
+#leia{
+    float: right;
+}
 
 #noticia-destaque img{
     float: inline-start;
